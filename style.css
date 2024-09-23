@@ -100,9 +100,6 @@ footer {
     transition: .4s;
 }
 
-
-
-
 .slider:before {
     position: absolute;
     content: "";
@@ -123,9 +120,85 @@ input:checked + .slider:before {
 }
 
 .slider.round {
-    border-radius: 34px;
+    border-radius: 40px;
 }
 
 .slider.round:before {
     border-radius: 50%;
 }
+
+/* Include the CSS code from earlier */
+#chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#chatbot-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+#chatbot-contact.chatbot-hidden {
+    display: none;
+}
+
+#chatbot-contact.chatbot-visible {
+    display: block;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+#chatbot-contact form {
+    max-width: 100%;
+}
+
+#chatbot-contact .btn {
+    width: 100%;
+}
+
+#chatbot-contact {
+    transition: opacity 0.3s ease;
+    background-color: #fff; /* White for light mode */
+    color: #000;
+}
+
+.chatbot-hidden {
+    display: none;
+}
+
+.chatbot-visible {
+    display: block;
+    /* Add animations or styles for the chatbot here */
+}
+#chatbot-icon img {
+    filter: none;
+    width: 50px;
+    height: 50px;
+}
+.dark-theme #chatbot-contact {
+    background-color: #2b2b2b; /* Dark background for dark mode */
+    color: #f1f1f1;
+}
+
+.dark-theme #chatbot-icon img {
+    filter: invert(100%);
+}
+
+#themeLabel {
+    color: #000; 
+}
+
+.dark-theme #themeLabel {
+    color: #f1f1f1; 
+}
+

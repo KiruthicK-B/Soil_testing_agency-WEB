@@ -1,4 +1,3 @@
-// Theme switching logic
 document.addEventListener("DOMContentLoaded", () => {
     const themeToggle = document.getElementById("themeToggle");
     const themeLabel = document.getElementById("themeLabel");
@@ -8,20 +7,33 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.add("dark-theme");
         themeToggle.checked = true;
         themeLabel.textContent = "Light Mode";
+    } else {
+        // Set default label for light theme
+        themeLabel.textContent = "Dark Mode";
     }
 
-    
-
     // Theme toggle action
-    themeToggle.addEventListener("change", () => {
-        if (themeToggle.checked) {
-            document.body.classList.add("dark-theme");
-            themeLabel.textContent = "Light Mode";
-            localStorage.setItem("darkMode", "enabled");
+    themeToggle.addEventListener('change', function() {
+        if (this.checked) {
+            document.body.classList.add('dark-theme'); // Add dark theme
+            themeLabel.textContent = 'Light Mode';
+            localStorage.setItem('darkMode', 'enabled'); // Save to localStorage
         } else {
-            document.body.classList.remove("dark-theme");
-            themeLabel.textContent = "Dark Mode";
-            localStorage.setItem("darkMode", "disabled");
+            document.body.classList.remove('dark-theme'); // Revert to light theme
+            themeLabel.textContent = 'Dark Mode';
+            localStorage.setItem('darkMode', 'disabled'); // Save to localStorage
         }
     });
 });
+
+// Chatbot toggling function
+function toggleChatbot() {
+    var chatbot = document.getElementById('chatbot-contact');
+    if (chatbot.classList.contains('chatbot-hidden')) {
+        chatbot.classList.remove('chatbot-hidden');
+        chatbot.classList.add('chatbot-visible');
+    } else {
+        chatbot.classList.remove('chatbot-visible');
+        chatbot.classList.add('chatbot-hidden');
+    }
+}

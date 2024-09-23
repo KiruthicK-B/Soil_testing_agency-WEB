@@ -136,32 +136,38 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Contact Us</h2>
-            <form action="contact.php" method="POST" class="row">
-                <div class="col-md-6 mb-3">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <input type="text" name="phone" class="form-control" placeholder="Your Phone" required>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <input type="text" name="subject" class="form-control" placeholder="Subject" required>
-                </div>
-                <div class="col-12 mb-3">
-                    <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
-                </div>
-                <div class="col-12 text-center">
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </div>
-            </form>
-        </div>
-    </section>
+       <!-- Chatbot Icon and Contact Form -->
+       <div id="chatbot-icon" onclick="toggleChatbot()">
+        <img src="chat.jpeg" alt="Chat Icon" />
+    </div>
+
+    <div id="chatbot-contact" class="chatbot-hidden">
+        <section id="contact" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Contact Us</h2>
+                <form action="contact.php" method="POST" class="row">
+                    <div class="col-md-6 mb-3">
+                        <input type="text" name="name" class="form-control" placeholder="Name" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="email" name="email" class="form-control" placeholder="Email" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="text" name="phone" class="form-control" placeholder="Phone" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-3 text-center">
