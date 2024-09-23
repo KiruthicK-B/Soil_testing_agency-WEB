@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
         themeLabel.textContent = "Light Mode";
     }
 
+    
+
     // Theme toggle action
     themeToggle.addEventListener("change", () => {
         if (themeToggle.checked) {
