@@ -38,7 +38,7 @@ footer {
     color: #fff;
 }
 
-/* Dark Theme */
+/* Dark Theme for switcing to dark mode*/
 .dark-theme {
     background-color: #2b2b2b;
     color: #f1f1f1;
@@ -118,7 +118,7 @@ input:checked + .slider {
 input:checked + .slider:before {
     transform: translateX(20px);
 }
-
+/*sliding css*/
 .slider.round {
     border-radius: 40px;
 }
@@ -144,7 +144,7 @@ input:checked + .slider:before {
 #chatbot-contact.chatbot-hidden {
     display: none;
 }
-
+/*making chatbot visible in the page*/
 #chatbot-contact.chatbot-visible {
     display: block;
     position: fixed;
