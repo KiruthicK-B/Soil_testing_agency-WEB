@@ -1,15 +1,12 @@
 /* Light Theme (default) */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
+/* Light Theme */
+body.light-theme {
     background-color: #fff;
     color: #000;
 }
 
-header {
+header, footer {
     background-color: #f8f9fa;
-    color: #000;
 }
 
 #home {
@@ -17,62 +14,121 @@ header {
     color: #fff;
 }
 
-.card {
-    background-color: #fff;
-    color: #000;
-}
-
-.btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-    color: #fff;
-}
-
-footer {
-    background-color: #222;
-    color: #fff;
-}
-
-#scrollToTop {
-    background-color: #007bff;
-    color: #fff;
-}
-
-/* Dark Theme for switcing to dark mode*/
-.dark-theme {
+/* Dark Theme */
+body.dark-theme {
     background-color: #2b2b2b;
-    color: #f1f1f1;
+    color: #eaeaea;
+}
+
+header, footer {
+    background-color: #1f1f1f;
+    color: #eaeaea;
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 5px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #007bff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+/* Animations */
+.animate {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dark Theme for switching to dark mode */
+.dark-theme {
+    background-color: #1f1f1f;
+    color: #eaeaea;
+}
+
+.dark-theme body {
+    background-color: #2b2b2b;
+    color: #eaeaea;
 }
 
 .dark-theme header {
     background-color: #1f1f1f;
-    color: #f1f1f1;
+    color: #eaeaea;
 }
 
 .dark-theme #home {
     background-color: #333;
-    color: #f1f1f1;
+    color: #eaeaea;
 }
 
 .dark-theme .card {
     background-color: #444;
-    color: #f1f1f1;
+    color: #eaeaea;
 }
 
 .dark-theme .btn-primary {
     background-color: #555;
     border-color: #555;
-    color: #f1f1f1;
+    color: #eaeaea;
 }
 
 .dark-theme footer {
     background-color: #1f1f1f;
-    color: #f1f1f1;
+    color: #eaeaea;
 }
 
 .dark-theme #scrollToTop {
     background-color: #555;
-    color: #f1f1f1;
+    color: #eaeaea;
 }
 
 /* Toggle Switch */
@@ -118,7 +174,7 @@ input:checked + .slider {
 input:checked + .slider:before {
     transform: translateX(20px);
 }
-/*sliding css*/
+
 .slider.round {
     border-radius: 40px;
 }
@@ -127,7 +183,7 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
-/* Include the CSS code from earlier */
+/* Chatbot Styles */
 #chatbot-icon {
     position: fixed;
     bottom: 20px;
@@ -144,7 +200,7 @@ input:checked + .slider:before {
 #chatbot-contact.chatbot-hidden {
     display: none;
 }
-/*making chatbot visible in the page*/
+
 #chatbot-contact.chatbot-visible {
     display: block;
     position: fixed;
@@ -166,28 +222,9 @@ input:checked + .slider:before {
     width: 100%;
 }
 
-#chatbot-contact {
-    transition: opacity 0.3s ease;
-    background-color: #fff; /* White for light mode */
-    color: #000;
-}
-
-.chatbot-hidden {
-    display: none;
-}
-
-.chatbot-visible {
-    display: block;
-    /* Add animations or styles for the chatbot here */
-}
-#chatbot-icon img {
-    filter: none;
-    width: 50px;
-    height: 50px;
-}
 .dark-theme #chatbot-contact {
-    background-color: #2b2b2b; /* Dark background for dark mode */
-    color: #f1f1f1;
+    background-color: #2b2b2b;
+    color: #eaeaea;
 }
 
 .dark-theme #chatbot-icon img {
@@ -195,10 +232,163 @@ input:checked + .slider:before {
 }
 
 #themeLabel {
-    color: #000; 
+    color: #000;
 }
 
 .dark-theme #themeLabel {
-    color: #f1f1f1; 
+    color: #eaeaea;
 }
 
+/* Sectors Section */
+.sectors {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    background-color: #fff;
+}
+
+.dark-theme .sectors {
+    background-color: #333;
+}
+
+.sector {
+    background-color: #005bbb;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.sector a {
+    background-color: #fff;
+    color: #005bbb;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.dark-theme .sector {
+    background-color: #444;
+    color: #eaeaea;
+}
+
+.dark-theme .sector a {
+    background-color: #555;
+    color: #eaeaea;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-column p, .footer-column a {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #ccc;
+}
+
+.footer-column a:hover {
+    color: #fff;
+}
+
+.social-links {
+    display: flex;
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin-right: 10px;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    max-width: 150px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.dark-theme footer {
+    background-color: #1f1f1f;
+    color: #eaeaea;
+}
+
+.dark-theme .copyright {
+    border-top-color: #444;
+    color: #eaeaea;
+}
+
+
+
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    background: #0c486e;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.stats .stat {
+    font-size: 1.5rem;
+}
+
+.stats .stat h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.stats .stat span {
+    font-size: 1rem;
+    display: block;
+    margin-top: 5px;
+}
