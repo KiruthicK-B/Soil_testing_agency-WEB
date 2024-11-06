@@ -7,177 +7,267 @@
     <title>Global Soil Testing & Digital Land Surveying</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <style>
+        /* Additional CSS for theme toggle */
+        body.light-theme {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        body.dark-theme {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .theme-switcher .switch {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+        }
+
+        .theme-switcher .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .theme-switcher .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 20px;
+        }
+
+        .theme-switcher .slider:before {
+            position: absolute;
+            content: "";
+            height: 14px;
+            width: 14px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(20px);
+        }
+    </style>
 </head>
-<body>
+<body class="light-theme">
     <!-- Header and Navigation Bar -->
-    <header class="bg-light p-3 shadow-sm theme-switcher" >
+    <header class="bg-light p-3 shadow-sm theme-switcher">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="#">
                     <img src="logo.png" alt="Company Logo" width="40"> Global Soil Testing & Digital Land Surveying
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Our Teams</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#teams">Our Teams</a></li>
                         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                         <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
-                    <a href="#contact" class="btn btn-outline-primary ms-3">Have a Queries?</a>
-                    <div class="theme-switcher text-end p-3">
+                    <a href="#contact" class="btn btn-outline-primary ms-3">Have a Query?</a>
+                    <div class="ms-3 theme-switcher">
                         <label class="switch">
                             <input type="checkbox" id="themeToggle">
-                            <span class="slider"></span>
+                            <span class="slider round"></span>
                         </label>
-                        <span id="themeLabel" class="ms-2"> Dark Mode</span>
+                        <span id="themeLabel" class="ms-2">Dark Mode</span>
                     </div>
                 </div>
             </nav>
-         
-            
-
         </div>
     </header>
-   
 
-    <section id="home" class="py-5 text-center bg-primary text-white">
+    <section id="home" class="py-5 text-center">
         <div class="container">
-            <h1>Global Soil Testing & Digital Land Surveying Agency.</h1>
+            <h1 class="mb-4 animate">Welcome to Global Soil Testing & Digital Land Surveying</h1>
             <p>Your trusted partner for soil testing, digital surveying, and land consultation services.</p>
-            <a href="#contact" class="btn btn-light">Get in Touch with us</a>
+            <a href="#contact" class="btn btn-light mt-3 animate">Get in Touch</a>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-5">
+    <!-- Stats Section -->
+    <section class="stats py-5 text-center">
         <div class="container">
-            <h2 class="text-center mb-4">Our Services</h2>
             <div class="row">
-
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Digital Surveying</h5>
-                            <p class="card-text">General Topographical Survey, Land Partition & Subdivision, Boundary Marking, and more.</p>
-                            <a href="#" class="btn btn-primary" onclick="showDetails(1)">Learn More</a>
-                        </div>
-                    </div>
+                <div class="col">
+                    <h2>65+ <span>Years</span></h2>
                 </div>
-                <!-- Service Card 2 -->
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Soil Testing</h5>
-                            <p class="card-text">Safe Bearing Capacity, Standard Penetration Test, Plate Load Test, and more.</p>
-                            <a href="#" class="btn btn-primary" onclick="showDetails(2)">Learn More</a>
-                        </div>
-                    </div>
+                <div class="col">
+                    <h2>1500+ <span>Projects</span></h2>
                 </div>
-                <!-- Service Card 3 -->
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Planners</h5>
-                            <p class="card-text">DTCP Approval, Layout Approval, Structural Design, and more.</p>
-                            <a href="#" class="btn btn-primary" onclick="showDetails(3)">Learn More</a>
-                        </div>
-                    </div>
+                <div class="col">
+                    <h2>2500+ <span>Team Strength</span></h2>
+                </div>
+                <div class="col">
+                    <h2>500 CR <span>Machinery Value</span></h2>
                 </div>
             </div>
         </div>
     </section>
-  <!-- Expertise Section -->
-    <section id="expertise" class="py-5 bg-light">
+
+    <section class="sectors">
+        <div class="sector">
+            <h3>AIRPORTS</h3>
+            <p>Building gateways to cities and cultures with minimal disruption.</p>
+            <a href="#">View Projects</a>
+        </div>
+        <div class="sector">
+            <h3>BUILDING</h3>
+            <p>Constructing specialized environments for communities.</p>
+            <a href="#">View Projects</a>
+        </div>
+        <div class="sector">
+            <h3>WATER IRRIGATION</h3>
+            <p>Building vital resource infrastructure.</p>
+            <a href="#">View Projects</a>
+        </div>
+        <div class="sector">
+            <h3>RAILWAYS</h3>
+            <p>Forwarding economic and social development and connectivity.</p>
+            <a href="#">View Projects</a>
+        </div>
+        <div class="sector">
+            <h3>METRO</h3>
+            <p>Transforming urban commuting and citizen experiences.</p>
+            <a href="#">View Projects</a>
+        </div>
+        <div class="sector">
+            <h3>POWER</h3>
+            <p>Developing infrastructure to power public and private sectors.</p>
+            <a href="#">View Projects</a>
+        </div>
+        <div class="sector">
+            <h3>ROAD</h3>
+            <p>Connecting places and people with effectively constructed roadways.</p>
+            <a href="#">View Projects</a>
+        </div>
+        <div class="sector">
+            <h3>INDUSTRIAL</h3>
+            <p>Strengthening and empowering industry expansion.</p>
+            <a href="#">View Projects</a>
+        </div>
+        <div class="sector">
+            <h3>INDUSTRIAL</h3>
+            <p>Strengthening and empowering industry expansion.</p>
+            <a href="#">View Projects</a>
+        </div>
+        <div class="sector">
+            <h3>INDUSTRIAL</h3>
+            <p>Strengthening and empowering industry expansion.</p>
+            <a href="#">View Projects</a>
+        </div>
+    </section>
+    
+    
+<!-- Chatbot Icon and Contact Form -->
+<div id="chatbot-icon" onclick="toggleChatbot()">
+    <img src="chat.jpeg" alt="Chat Icon" />
+</div>
+
+<div id="chatbot-contact" class="chatbot-hidden">
+    <section id="contact" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Our Expertise</h2>
-            <ul class="list-group">
-                <li class="list-group-item">Drone Survey</li>
-                <li class="list-group-item">Topographical Survey</li>
-                <li class="list-group-item">Land-Use Map & Register Preparation</li>
-                <li class="list-group-item">Preparation of Town Plan or City Plan for Sewerage/Drainage or for Water Pipe Line Network</li>
-                <li class="list-group-item">Lay-Out (Industrial, Real Estate, and Utilities etc.)</li>
-                <li class="list-group-item">Bathymetric and Waterways Alignment</li>
-                <li class="list-group-item">Survey for Micro & Macro Canalization</li>
-            </ul>
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <form action="contact.php" method="POST" class="row">
+                <div class="col-md-6 mb-3">
+                    <input type="text" name="name" class="form-control" placeholder="Name" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <input type="text" name="phone" class="form-control" placeholder="Phone" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                </div>
+                <div class="col-12 mb-3">
+                    <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </div>
+            </form>
         </div>
     </section>
-    <!-- Technology and Equipment Section -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">Technology & Equipment</h2>
-            <div class="row">
-                <div class="col-md-3 text-center">
-                    <img src="total station.jpeg" alt="Total Station" class="img-fluid">
-                    <p>Total Station - Leica, Sokkia</p>
-                </div>
-                <div class="col-md-3 text-center">
-                    <img src="sokia.jpeg " alt="Auto Level" class="img-fluid">
-                    <p>Auto Level</p>
-                </div>
-                <div class="col-md-3 text-center">
-                    <img src="dgps RTK.jpeg" alt="GPS Survey" class="img-fluid">
-                    <p>GPS Survey with RTK</p>
-                </div>
-                <div class="col-md-3 text-center">
-                    <img src="drone.jpeg" alt="Drone Survey" class="img-fluid">
-                    <br>
-                    <p>Drone Survey</p>
-                </div>
-                <!--<div class="col-md-3 text-center"></div>
-                   <img src="com & laps.jpeg" alt="Auto Level" class="img-fluid">
-                    <p>Auto Level</p>
-                </div>-->
+</div>
+<footer>
+    <div class="footer-container">
+        <!-- Company Logo -->
+        <div class="footer-column footer-logo">
+            <img src="https://your-company-logo.com/logo.png" alt="Company Logo">
+        </div>
+        <!-- Contact Information -->
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+            <p>05, Sri Laxmi inn, Opp Anna Statue,</p>
+               <p> Bhavani Main Road
+                </p>
+            <p>Perundurai, Erode - 638052
+            </p>
+            <p>Phone: (+91) 7010697778</p>
+            <p>Email: Globalsurveying92@gmail.com</p>
+        </div>
+        <!-- Social Media Links -->
+        <div class="footer-column">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+                <a href="https://facebook.com">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174848.png" alt="Facebook">
+                </a>
+                <a href="https://twitter.com">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">
+                </a>
+                <a href="https://linkedin.com">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                </a>
+                <a href="https://instagram.com">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+                </a>
             </div>
         </div>
-    </section>
-
-       <!-- Chatbot Icon and Contact Form -->
-       <div id="chatbot-icon" onclick="toggleChatbot()">
-        <img src="chat.jpeg" alt="Chat Icon" />
+        <!-- Company Info -->
+        <div class="footer-column">
+            <h3>About Us</h3>
+            <p>We are a leading company providing the best solutions for your business. Get in touch with us to know more about our services and products.</p>
+        </div>
     </div>
-
-    <div id="chatbot-contact" class="chatbot-hidden">
-        <section id="contact" class="py-5">
-            <div class="container">
-                <h2 class="text-center mb-4">Contact Us</h2>
-                <form action="contact.php" method="POST" class="row">
-                    <div class="col-md-6 mb-3">
-                        <input type="text" name="name" class="form-control" placeholder="Name" required>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <input type="email" name="email" class="form-control" placeholder="Email" required>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <input type="text" name="phone" class="form-control" placeholder="Phone" required>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <input type="text" name="subject" class="form-control" placeholder="Subject" required>
-                    </div>
-                    <div class="col-12 mb-3">
-                        <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <div class="col-12 text-center">
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </div>
-                </form>
-            </div>
-        </section>
+    <!-- Copyright -->
+    <div class="copyright">
+        &copy; 2024 Global Soil Testing & Digital Land Surveying. All Rights Reserved.
     </div>
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-3 text-center">
-        <p>&copy; 2024 Global Soil Testing & Digital Land Surveying</p>
-    </footer>
-
+</footer>
     <!-- JavaScript Files -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
-    <!-- Scroll to Top Button -->
-    <button id="scrollToTop" class="btn btn-primary position-fixed bottom-0 end-0 m-3" style="display: none;">Top</button>
-
+    <script>
+        // Theme toggle functionality
+        document.getElementById('themeToggle').addEventListener('change', function () {
+            document.body.classList.toggle('dark-theme');
+            document.body.classList.toggle('light-theme');
+        });
+    </script>
 </body>
 </html>
