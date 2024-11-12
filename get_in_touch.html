@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Global Soil Testing & Digital Land Surveying</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: #fff;
+        }
+        h2, h3 {
+            color: #fdd835; /* Gold color for headings */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Styles */
+        .header {
+            position: relative;
+            padding: 20px;
+            background-color: #222;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header .back-arrow {
+            font-size: 1.5em;
+            color: #fdd835;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #fdd835;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 60px 0;
+            background-color: #111;
+            color: #fff;
+        }
+        .contact-header {
+            text-align: center;
+            font-size: 4em;
+            font-weight: bold;
+            position: relative;
+        }
+        .contact-header::before {
+            content: "CONTACT";
+            position: absolute;
+            font-size: 6em;
+            color: rgba(255, 255, 255, 0.05);
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+        .contact-header span {
+            color: #fdd835;
+        }
+        .contact-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        .contact-info, .contact-form {
+            max-width: 500px;
+            width: 100%;
+        }
+
+        /* Contact Info */
+        .contact-info h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .contact-info p {
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+        .contact-info .icon {
+            font-size: 1.2em;
+            color: #fdd835;
+            margin-right: 8px;
+        }
+
+        /* Contact Form */
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #222;
+            color: #fff;
+            border: 1px solid #444;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background-color: #fdd835;
+            color: #111;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #ffea3b;
+        }
+        .contact-form label {
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #222;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer a {
+            color: #fdd835;
+            text-decoration: none;
+        }
+
+        /* Responsive Layout */
+        @media (min-width: 768px) {
+            .contact-content {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+        }
+        
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-column p, .footer-column a {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #ccc;
+}
+
+.footer-column a:hover {
+    color: #fff;
+}
+
+.social-links {
+    display: flex;
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin-right: 10px;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    max-width: 150px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.dark-theme footer {
+    background-color: #1f1f1f;
+    color: #eaeaea;
+}
+
+.dark-theme .copyright {
+    border-top-color: #444;
+    color: #eaeaea;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section with Back Arrow -->
+    <div class="header">
+        <a href="index.html" class="back-arrow"><i class="fas fa-arrow-left"></i></a>
+        <h1>Contact Us</h1>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <!-- Contact Header -->
+            <div class="contact-header">
+                <span>GET IN TOUCH</span>
+            </div>
+            
+            <!-- Contact Content -->
+            <div class="contact-content">
+                
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h3>DON'T BE SHY</h3>
+                    <p>Feel free to get in touch with us. We are always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+                    <p><span class="icon"><i class="fas fa-envelope"></i></span> Mail us at <strong>Globalsurveying92@gmail.com</strong></p>
+                    <p><span class="icon"><i class="fas fa-phone"></i></span> Call us at <strong>+91 7010697778</strong></p>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <form action="contact.php" method="POST">
+                        <input type="text" name="name" placeholder="Enter your Name" required>
+                        <input type="email" name="email" placeholder="Enter a valid email address" required>
+                        <input type="text" name="phone" placeholder="Enter your Phone" required>
+                        <textarea name="message" rows="5" placeholder="Enter your message" required></textarea>
+                        <!-- <label>
+                            <input type="checkbox" name="terms" required>
+                            I accept the <a href="#">Terms of Service</a>
+                        </label> -->
+                        <button type="submit">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Company Logo -->
+            <div class="footer-column footer-logo">
+                <img src="https://your-company-logo.com/logo.png" alt="Company Logo">
+            </div>
+            <!-- Contact Information -->
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>05, Sri Laxmi inn, Opp Anna Statue,</p>
+                   <p> Bhavani Main Road
+                    </p>
+                <p>Perundurai, Erode - 638052
+                </p>
+                <p>Phone: (+91) 7010697778</p>
+                <p>Email: Globalsurveying92@gmail.com</p>
+            </div>
+            <!-- Social Media Links -->
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174848.png" alt="Facebook">
+                    </a>
+                    <a href="https://twitter.com">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">
+                    </a>
+                    <a href="https://linkedin.com">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://instagram.com">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+            <!-- Company Info -->
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <p>We are a leading company providing the best solutions for your business. Get in touch with us to know more about our services and products.</p>
+            </div>
+        </div>
+        <p>© 2024 Global Soil Testing & Digital Land Surveying. All rights reserved.</p>
+        <p><a href="terms.html">Terms of Service</a> | <a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+
+</body>
+</html>
